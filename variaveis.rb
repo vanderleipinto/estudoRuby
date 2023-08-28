@@ -54,20 +54,20 @@
 
 # variaveis de classes específica @
 
-# class User 
-#   def add(name)
-#     @name = name
-#     puts "User adicionado"
-#     hello
-#   end
+class User 
+  def add(name)
+    @name = name
+    puts "User adicionado"
+    hello
+  end
 
-#   def hello
-#     puts "Seja bem vindo, #{@name}"
-#   end
-# end
+  def hello
+    puts "Seja bem vindo, #{@name}"
+  end
+end
 
-# user = User.new
-# user.add('Vanderlei');
+user = User.new
+user.add('Vanderlei');
 
 # Atributos
 
