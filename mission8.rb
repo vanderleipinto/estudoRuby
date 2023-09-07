@@ -211,5 +211,10 @@ puts "\n"
 lutadorx.chute_frontal
 lutadorx.jab_de_esquerda
 
+lutadory = LutadorY.new
+puts "\n"
+lutadory.chute_frontal
+lutadory.chute_lateral
+
 
 puts "\n \n \n ---------------- "
