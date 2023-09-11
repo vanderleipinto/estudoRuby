@@ -47,3 +47,15 @@ File.open('json.json', 'w') do |line|
   line.puts(response.body)
 end
 
+req = Net::HTTP::Post.new("/api/users")
+# para fazer chamadas https
+req.set_form_data({name:'Vanderlei', job:'Developer'})
+
+response = Net::HTTP.start('reqres.in', use_ssl: true) do |http|
+  http.request(req)
+end
+
+puts '\n\n\n----------------------\n\n\n'
+puts response.code
+puts response.body
+
