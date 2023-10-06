@@ -1,4 +1,4 @@
-#https://exercism.org/tracks/ruby/exercises/matrix/edit
+#https://exercism.org/tracks/ruby/exercises/matrix/edit 
 class Matrix
   def initialize(matrix)
     substring = matrix.split("\n") #divide strings separadas por quebra de linha
