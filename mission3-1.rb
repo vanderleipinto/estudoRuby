@@ -6,6 +6,7 @@
 # crie uma calculadora que ofereça ao usuário a opção de:
 # multiplicar, dividir, adicionar ou subtrair dois números.
 # Não se esqueça de permitir que o usuário feche o programa.
+#prepare to issue
 
 
 valid_operator = ['+','-','*','/']

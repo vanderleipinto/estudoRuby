@@ -3,7 +3,7 @@
 
 puts "Digite o nome:"
 name = gets.chomp
-puts "Digite a sua idade:" 
+puts "Digite a sua idade:"  
 age = gets.chomp
 
 puts "Olá #{name} você tem #{age} anos."

@@ -1,6 +1,6 @@
 # Curso de Ruby - Conceitos Básicos (Aula 2)
 # https://www.youtube.com/watch?v=JH_aEjoD4C0&list=PLdDT8if5attEOcQGPHLNIfnSFiJHhGDOZ&index=2&ab_channel=OneBitCode
-
+#use as issue
 puts "Digite um número:"
 num_1 = gets.chomp.to_i
 puts "Digite outro número:" 
