@@ -1,4 +1,4 @@
-# https://exercism.org/tracks/ruby/exercises/log-line-parser/edit
+# https://exercism.org/tracks/ruby/exercises/log-line-parser/edit 
 
 
 class LogLineParser
