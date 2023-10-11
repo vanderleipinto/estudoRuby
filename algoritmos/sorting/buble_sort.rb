@@ -11,7 +11,7 @@ def buble_sort(arr)
         swapped = true
       end      
     end
-  break unless swapped
+  break unless swapped 
 end
 return arr
 end
