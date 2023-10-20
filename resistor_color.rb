@@ -4,3 +4,5 @@ class ResistorColor
     return COLORS.index(color)
   end
 end  
+
+#no secondary solution
