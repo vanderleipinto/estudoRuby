@@ -35,3 +35,5 @@ class ListOps
     result
   end
 end
+
+#no alternative code
