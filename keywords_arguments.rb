@@ -15,3 +15,19 @@ def convert_temp(temp, **options)
     return temp * 1.8 - 459.67  if options.values_at(:output_scale) == ['fahrenheit']
   end 
 end
+
+# alternative version
+#def convert_temp(temp, **option)
+#   if option[:input_scale] == "kelvin" 
+#      temp = temp - 273.15
+#  elsif option[:input_scale] == "fahrenheit" 
+#      temp = ((temp - 32) / 1.8)
+#  end
+  
+#  if option[:output_scale] == "kelvin"
+#     temp =  temp + 273.15
+#  elsif option[:output_scale] == "fahrenheit"
+#    temp = 1.8 * temp +32
+#  end
+#  temp
+# end
