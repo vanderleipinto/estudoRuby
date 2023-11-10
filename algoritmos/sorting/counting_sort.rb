@@ -19,8 +19,4 @@ def counting_sort(arr)
   return output_array
 end
 
-<<<<<<< HEAD
 print counting_sort([1, 4, 1, 2, 7, 5, 2])
-=======
-print counting_sort([1, 4, 1, 2, 7, 5, 2])
->>>>>>> 6df437fd0fd3ed8fb97595128176047de99a823f
