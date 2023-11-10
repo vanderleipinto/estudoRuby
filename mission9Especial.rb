@@ -127,7 +127,7 @@ time.saturday?
 time2 = Time.now
 
 
-### METHOD MISSING
+###  MISSING
 # Ele é utilizado para interceptar chamadas a métodos que não existem.
 # Toda vez que forem chamados métodos que não existem, esse método será chamado no lugar
 
