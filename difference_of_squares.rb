@@ -2,23 +2,17 @@
 class Squares
     def initialize(num)
       @num = num
-      
-      @summ = 0
     end
   def square_of_sum
     sum = 0
-    for n in 1..@num do
-      sum += n      
-    end
-     return sum**2    
+    1.upto(@num){|n| sum += n}
+    sum**2    
   end
 
   def sum_of_squares   
     sum = 0
-    for n in 1..@num do
-      sum += n**2      
-    end
-     return sum
+    1.upto(@num){|n| sum += n**2}
+    sum
   end
 
   def difference
