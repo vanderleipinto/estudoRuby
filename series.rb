@@ -11,3 +11,7 @@ class Series
     ret.map{|sub| sub.join('')}
   end
 end
+
+##alternative
+
+## @total.chars.each_cons(num).map(&:join)
