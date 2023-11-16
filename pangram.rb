@@ -4,7 +4,6 @@ class Pangram
     @arr = text.downcase.chars
     @missing = ('a'..'z').to_a
   end
-    
 
   def pan
 
@@ -19,7 +18,6 @@ class Pangram
     end
   end
 end
-
 
 puts "Digite uma frase"
 text = gets.chomp
