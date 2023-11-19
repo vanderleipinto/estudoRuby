@@ -20,3 +20,26 @@ class WordProblem
      eval("#{result[0]}#{arr[3..].join('')}")   
    end
  end
+
+#Código melhorado
+
+#class WordProblem
+#   def initialize(text)
+#     @text = text
+#   end
+#   def answer
+#   arr = []
+#     @text.split(' ').each do |item|
+#        arr << item.to_i if item.to_i != 0
+#        arr << :+ if  item == 'plus'
+#        arr << :- if item == 'minus'
+#        arr << :/ if item == 'divided'
+#        arr << :* if item == 'multiplied'
+#     end
+#   
+#   raise ArgumentError, 'Argument error' unless  arr.include?(:+) || arr.include?(:-) || arr.include?(:/) || arr.include?(:*)
+#   
+#     arr.unshift(:+)
+#   arr.each_slice(2).inject(0){|sum, (op, num)| sum.send(op,num)}
+#   end
+#end
