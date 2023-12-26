@@ -1,26 +1,40 @@
+#https://www.geeksforgeeks.org/minimum-product-subset-array/
 
+class Minimum_multiple
+   def initialize(arr)
+     @arr = arr
+     @arr_length = arr.length     
+   end
 
-def minimum_product(arr)
-  zeros = 0
-  negatives = []
-  arr.each do |value,index|
-    negatives << value if value.negative?
-    zero +=1 if value == 0
-  end
-  if negatives.length.even && zeros==0
-    arr.delete(negatives.max)
-    return arr.reduce(1) { |p, e| p * e}
-  end
+   def minimum_multiple
+      negatives = []
+      zeros = 0
+      arr = @arr
+     return @arr[0] if @arr_length == 1
 
-  if negatives.length.odd && zeros==0    
-    return arr.reduce(1) { |p, e| p * e}
-  end
-  
+     @arr.each do |value|
+      negatives << value if value.negative?
+      zeros += 1 if value == 0
+      
+     end
 
+      if negatives.length.odd? && zeros==0
+         result = arr.reduce(1) { |p, e| p * e}
+      end
+      if negatives.length.even? && zeros==0
+         arr.delete(negatives.min)
+         result =  arr.reduce(1) { |p, e| p * e}
+      end
 
-end
- 
+      result = 0 if negatives.empty? && zeros!=0
+      result = arr.min if negatives.empty? && zeros==0
+      return result
+   end
+ end
 
+ arr = [1, 1, -2, 4, 3]
+ minimum =  Minimum_multiple.new(arr)
+print minimum.minimum_multiple
 
 
 

@@ -1,33 +1,21 @@
-#https://exercism.org/tracks/ruby/exercises/boutique-inventory/edit
 class BoutiqueInventory
+  attr_reader :items
+
   def initialize(items)
     @items = items
+
+    raise "Refactor this code so that items is an array of openstructs"
   end
 
   def item_names
-    @items.map{|item| item[:name] }.sort
-  end
+    items.map { |item| item[:name] }.sort
 
-  def cheap
-    @items.select{|item| item[:price]<30.0}
-  end
-
-  def out_of_stock
-     @items.select{|item| item[:quantity_by_size] == {}}
-  end
-
-  def stock_for_item(name)
-    result = @items.find {|item| item[:name]== name}
-    return result[:quantity_by_size]
-    
+    raise "Refactor the code in item_names"
   end
 
   def total_stock
-    total = 0
-    items.map{|i| i[:quantity_by_size].each{|key,value| total+= value}}
-    return total
-  end
+    items.sum do |item|
+      item[:quantity_by_size].values.sum
+    end
 
-  private
-  attr_reader :items
-end
+    
