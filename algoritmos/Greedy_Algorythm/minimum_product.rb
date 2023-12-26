@@ -1,12 +1,12 @@
 #https://www.geeksforgeeks.org/minimum-product-subset-array/
 
-class Minimum_multiple
+class Minimum_product
    def initialize(arr)
      @arr = arr
      @arr_length = arr.length     
    end
 
-   def minimum_multiple
+   def minimum_product
       negatives = []
       zeros = 0
       arr = @arr
@@ -33,8 +33,8 @@ class Minimum_multiple
  end
 
  arr = [1, 1, -2, 4, 3]
- minimum =  Minimum_multiple.new(arr)
-print minimum.minimum_multiple
+ minimum =  Minimum_product.new(arr)
+print minimum.minimum_product
 
 
 
