@@ -13,7 +13,7 @@ class HighScores
 
   def personal_best
     # bigger = @list.first
-    # @list.each{|actual| bigger = actual if actual >= bigger}
+    # @list.each{|actual| bigger = actual if actual >= bigger }
     # bigger
 
     @list.sort.last

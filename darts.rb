@@ -2,7 +2,7 @@
 class Darts
   def initialize (x,y)
     @x=x
-    @y=y    
+    @y=y 
   end
 
   def score
