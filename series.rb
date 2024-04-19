@@ -1,4 +1,4 @@
-#https://exercism.org/tracks/ruby/exercises/series/edit
+# https://exercism.org/tracks/ruby/exercises/series/edit
 class Series
   def initialize(total)
     @total = total
@@ -7,11 +7,11 @@ class Series
   def slices(num)
     raise ArgumentError, "ArgumentError" if num > @total.size
     ret = []
-    @total.split('').each_cons(num) {|a| ret << a}
-    ret.map{|sub| sub.join('')}
+    @total.split("").each_cons(num) { |a| ret << a }
+    ret.map { |sub| sub.join("") }
   end
 end
 
-##alternative
+# #alternative
 
 ## @total.chars.each_cons(num).map(&:join)
