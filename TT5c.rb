@@ -26,8 +26,8 @@ class Palestra
     @duration = duration
   end
 
-  def show
-    [@name, @duration].to_s
+  def hash
+    {name: @name, duration: @duration}
   end
 end
 
@@ -80,7 +80,7 @@ def distribuir_excedente(tracks)
     excedente_restante = []
     excedente.each do |elem|
       p excedente.each { |palestra| print "Excedente -> #{palestra.duration}," }
-      if track.sum { |palestra| palestra.duration } + elem.time <= 240
+      if track.sum { |palestra| palestra.duration } + elem.duration <= 240
         track << elem
       else
         excedente_restante << elem
@@ -112,17 +112,31 @@ tracks.each_with_index do |track, index|
   puts " - Soma - #{track.sum { |palestra| palestra.duration }}\n"
 end
 
+def format_time(minutes)
+  hours = minutes.to_f / 60
+  minutes = minutes.to_i % 60
+  format("%02d:%02d", hours.to_i, minutes.to_i)
+end
+
 turno = "Track A"
+time = 60 * 9
 tracks.each_with_index do |track, index|
   if index.even?
     puts "#Turno '#{turno}'"
     turno = turno.succ!
     puts "--- Manhã ---"
-    track.each { |palestra| puts "#{palestra.name} -- #{palestra.duration}" }
-    puts "--- Almoço ---"
+    time = 60 * 9
+    track.each do |palestra|
+      puts "#{format_time(time)}hs - #{palestra.name} -- #{format_time(palestra.duration)}"
+      time += palestra.duration
+    end
+    puts "12:00hs--- Almoço ---"
   else
     puts "--- Tarde ---"
-    track.each { |palestra| puts "#{palestra.name} -- #{palestra.duration}" }
-    puts "--- Evento de Network ---"
+    track.each do |palestra|
+      puts "#{format_time(time)}hs - #{palestra.name} -- #{format_time(palestra.duration)}"
+      time += palestra.duration
+    end
+    puts "#{format_time(time)}hs--- Evento de Network ---"
   end
 end
