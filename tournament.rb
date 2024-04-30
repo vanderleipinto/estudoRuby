@@ -52,3 +52,28 @@ class Tournament
     str
   end
 end
+
+# reduced
+
+# class Tournament
+
+#   def self.tally input
+#     teams = Hash.new{|hash, key| hash[key] = {:W => 0, :D => 0, :L => 0} }
+#     input.strip.lines do |line|
+#       a, b, status = line.split ';'
+#       case status.rstrip
+#         when  'win'; status_a = :W; status_b = :L
+#         when 'loss'; status_a = :L; status_b = :W
+#         when 'draw'; status_a = :D; status_b = :D
+#       end
+#       teams[a][status_a] += 1
+#       teams[b][status_b] += 1
+#     end
+
+#     "Team                           | MP |  W |  D |  L |  P\n"\
+#     + teams.sort_by{|team, hash| w, d = hash.values; [-(w * 3 + d), team] }
+#           .map{|team, hash| w, d, l = hash.values; sprintf "%-30s | %2d | %2d | %2d | %2d | %2d\n", team, w+l+d, w, d, l, w*3+d }
+#           .join
+#   end
+
+# end
