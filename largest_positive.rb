@@ -6,3 +6,5 @@ def find_max_k(nums)
   nums.each { |num| ret << num if nums.include?(num * -1) }
   ret.max || -1
 end
+
+#no alternative code
